@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.progetto_applicazione.AddDataController">
+   <content>
+      <VBox alignment="CENTER" fillWidth="false" spacing="20.0" stylesheets="@style/add.css">
+         <children>
+            <Label styleClass="text-shadow" stylesheets="@style/add.css" text="Add Homebrew Data" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+            </Label>
+            <Label styleClass="text-shadow" stylesheets="@style/add.css" text="What do you want to add?" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <ComboBox fx:id="dataBox" onAction="#selectVbox" promptText="Choose one.       " />
+            
+                              <VBox fx:id="spellBox" alignment="TOP_CENTER" fillWidth="false" managed="false" maxWidth="-1.0" spacing="20.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  
+                                    <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label text="Name (*)" />
+                        <TextField fx:id="spellName" prefWidth="400.0" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_CENTER" prefWidth="400.0" spacing="175.0">
+                     <children>
+                        
+                                          <VBox alignment="TOP_CENTER" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label text="Spell range (*)" />
+                              <TextField fx:id="spellRange" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                        
+                                          <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <Label text="Level" />
+                              <ComboBox fx:id="spellLevel" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  
+                                    <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label text="Description (*)" />
+                        <TextArea fx:id="spellDesc" prefHeight="100.0" prefWidth="400.0" />
+                     </children>
+                  </VBox>
+                  
+                                    <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label text="Effects at higher levels" />
+                        <TextArea fx:id="spellHiLev" prefHeight="100.0" prefWidth="400.0" />
+                     </children>
+                  </VBox>
+                  
+                                          <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label text="Material" />
+                        <TextArea fx:id="spellMaterial" prefHeight="60.0" prefWidth="400.0" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" spacing="50.0">
+                     <children>
+                        <VBox fx:id="spellComponents" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label contentDisplay="BOTTOM" text="Components (*)">
+                                 <graphic>
+                                    <VBox alignment="CENTER" maxWidth="400.0" spacing="5.0">
+                                       <children>
+                                          <CheckBox fx:id="spellComponentS" text="Somatic" />
+                                          <CheckBox fx:id="spellComponentM" text="Material" />
+                                          <CheckBox fx:id="spellComponentV" text="   Verbal" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </VBox>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </VBox>
+                        
+                                          <VBox alignment="CENTER" prefWidth="100.0" spacing="5.0">
+                           <children>
+                               <Label text="Ritual" />
+                               <RadioButton fx:id="spellRitual" text="Yes" />
+                           </children>
+                        </VBox>
+            
+                                          <VBox alignment="CENTER" prefWidth="100.0" spacing="5.0">
+                           <children>
+                               <Label text="Concentration" />
+                               <RadioButton fx:id="spellConcentration" text="Yes" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefWidth="400.0" spacing="50.0">
+                     <children>
+                        
+                                          <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <Label text="Duration (*)" />
+                              <TextField fx:id="spellDuration" prefWidth="400.0" />
+                           </children>
+                        </VBox>
+                        
+                                          <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <Label text="Casting time (*)" />
+                              <TextField fx:id="spellCastingTime" prefWidth="400.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefWidth="400.0" spacing="50.0">
+                     <children>
+                        
+                                          <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <Label text="Attack type" />
+                              <TextField fx:id="spellAttackType" prefWidth="400.0" />
+                           </children>
+                        </VBox>
+                        
+                                          <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <Label text="Spell school" />
+                              <TextField fx:id="spellSchool" prefWidth="400.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" prefWidth="400.0">
+                     <children>
+                        <Label text="Area of effect" />
+                        <HBox alignment="TOP_CENTER" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              
+                                                                              <VBox alignment="TOP_CENTER" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Type" />
+                                    <TextField fx:id="spellAoeType" prefWidth="400.0" />
+                                 </children>
+                              </VBox>
+                              
+                                                                              <VBox alignment="TOP_CENTER" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Range" />
+                                    <TextField fx:id="spellAoeRange" prefWidth="400.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button fx:id="spellButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#checkSpell" text="Add spell" />
+                  
+                                 </children>
+            </VBox>
+            <VBox fx:id="magicItemBox" alignment="TOP_CENTER" fillWidth="false" managed="false" spacing="20.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+               <children>
+                  <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label text="Name (*)" />
+                        <TextField fx:id="magicItemName" prefWidth="400.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label text="Description (*)" />
+                        <TextArea fx:id="magicItemDesc" prefHeight="100.0" prefWidth="400.0" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="250.0" prefWidth="400.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <Label text="Rarity" />
+                              <ComboBox fx:id="magicItemRarity" promptText="Common" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <Label text="Magic item image" />
+                              <Button fx:id="magicItemImgBtn" mnemonicParsing="false" onAction="#uploadImage" text="Click here to uplad" />
+                              <ImageView fx:id="magicItemImg" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#deleteImg" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="magicItemButton" alignment="CENTER" mnemonicParsing="false" onAction="#checkMagicItem" text="Add Magic Item" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="equipmentItemBox" alignment="TOP_CENTER" fillWidth="false" managed="false" spacing="20.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+               <children>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <Label text="Name (*)" />
+                        <TextField fx:id="equipmentItemName" prefWidth="400.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefWidth="400.0">
+                     <children>
+                        <Label text="Description (*)" />
+                        <TextArea fx:id="equipmentItemDesc" prefHeight="100.0" prefWidth="400.0" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_CENTER" spacing="10.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER">
+                           <children>
+                              <Label text="Price (*)" />
+                              <TextField fx:id="equipmentItemPrice" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefWidth="70.0">
+                           <children>
+                              <Label text="Currency" />
+                              <ComboBox fx:id="equipmentItemCurrency" prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefWidth="100.0">
+                           <children>
+                              <Label text="Weight" />
+                              <TextField fx:id="equipmentItemWeight" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="equipmentItemButton" mnemonicParsing="false" onAction="#checkEquipmentItem" text="Add Equipment Item" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <Text fx:id="result" managed="false" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" />
+            <Hyperlink fx:id="homeLink" onAction="#backToHome" text="Return to the homepage">
+               <font>
+                  <Font size="24.0" />
+               </font></Hyperlink>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <styleClass>
+            <String fx:value="add_background" />
+            <String fx:value="add_text" />
+         </styleClass>
+      </VBox>
+   </content>
+</ScrollPane>

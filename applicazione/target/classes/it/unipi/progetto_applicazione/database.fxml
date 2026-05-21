@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10.0" styleClass="database_background" stylesheets="@style/database.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.progetto_applicazione.DatabaseController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="20.0">
+            <children>
+                <Label styleClass="text-shadow" stylesheets="@style/database.css" text="Database Search" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="36.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="homeLink" alignment="TOP_CENTER" onAction="#backToHome" stylesheets="@style/database.css" text="Return to the homepage">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+               <font>
+                  <Font size="24.0" />
+               </font>
+                </Hyperlink>
+            </children>
+        </HBox>
+
+        <TabPane fx:id="tables" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+            <tabs>
+                
+                <Tab text="Spells">
+                    <content>
+                        <VBox spacing="10.0">
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label styleClass="text-shadow" text="Search by:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                                        <ComboBox fx:id="spellFilterBox" prefWidth="120.0" />
+                              <TextField fx:id="spellFilterText" />
+                              <Button fx:id="spellFilterButton" mnemonicParsing="false" onAction="#spellFilterBy" text="Search" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </HBox>
+                                <TableView fx:id="spellsTable" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="colSpellIndex" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Index" />
+                                        <TableColumn fx:id="colSpellName" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Name" />
+                                        <TableColumn fx:id="colSpellLevel" maxWidth="-1.0" minWidth="50.0" prefWidth="-1.0" text="Level" />
+                                        <TableColumn fx:id="colSpellDesc" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Description" />
+                                        <TableColumn fx:id="colSpellHigherLevel" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="At higher levels" />
+                                        <TableColumn fx:id="colSpellComponents" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Components" />
+                                        <TableColumn fx:id="colSpellMaterials" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Materials" />
+                                        <TableColumn fx:id="colSpellRange" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Range" />
+                                        <TableColumn fx:id="colSpellAttackType" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Attack type" />
+                                        <TableColumn fx:id="colSpellRitual" maxWidth="-1.0" minWidth="50.0" prefWidth="-1.0" text="Ritual" />
+                                        <TableColumn fx:id="colSpellConcentration" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Concentration" />
+                                        <TableColumn fx:id="colSpellDuration" maxWidth="-1.0" minWidth="150.0" prefWidth="-1.0" text="Duration" />
+                                        <TableColumn fx:id="colSpellCastingTime" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Casting time" />
+                                        <TableColumn fx:id="colSpellSchool" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="School" />
+                                        <TableColumn fx:id="colSpellAoe" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Area of effect" />
+                                        <TableColumn fx:id="colSpellHomebrew" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Homebrew" />
+                                    </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#removeSpell" text="Remove from the database" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                                </TableView>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <Tab text="Magic Items">
+                    <content>
+                        <VBox spacing="10.0">
+                            <padding>
+                                <Insets top="10" />
+                            </padding>
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label styleClass="text-shadow" text="Search by:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                                        <ComboBox fx:id="magicItemFilterBox" prefWidth="120.0" />
+                              <TextField fx:id="magicItemFilterText" />
+                              <Button fx:id="magicItemFilterButton" mnemonicParsing="false" onAction="#magicItemFilterBy" text="Search" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <TableView fx:id="magicItemsTable" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="colMagicItemIndex" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Index" />
+                                        <TableColumn fx:id="colMagicItemName" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Name" />
+                                        <TableColumn fx:id="colMagicItemRarity" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Rarity" />
+                                        <TableColumn fx:id="colMagicItemDesc" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Description" />
+                                        <TableColumn fx:id="colMagicItemImage" maxWidth="-1.0" minWidth="150.0" prefWidth="-1.0" text="Image" />
+                                        <TableColumn fx:id="colMagicItemHomebrew" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Homebrew" />
+                                    </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#removeMagicItem" text="Remove from the database" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                                </TableView>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <Tab text="Equipment">
+                    <content>
+                        <VBox spacing="10.0">
+                            <padding>
+                                <Insets top="10" />
+                            </padding>
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label styleClass="text-shadow" text="Search by:" textFill="WHITE">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                        </Label>
+                                        <ComboBox fx:id="equipmentItemFilterBox" prefWidth="120.0">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </ComboBox>
+                              <TextField fx:id="equipmentItemFilterText" />
+                              <Button fx:id="equipmentItemFilterButton" mnemonicParsing="false" onAction="#equipmentItemFilterBy" text="Search" />
+                                    </children>
+                                </HBox>
+                                <TableView fx:id="equipmentItemsTable" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="colEquipmentItemIndex" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Index" />
+                                        <TableColumn fx:id="colEquipmentItemName" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Name" />
+                                        <TableColumn fx:id="colEquipmentItemDesc" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Description" />
+                                        <TableColumn fx:id="colEquipmentItemPrice" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Price" />
+                                        <TableColumn fx:id="colEquipmentItemCurrency" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Currency" />
+                                        <TableColumn fx:id="colEquipmentItemWeight" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Weight" />
+                                        <TableColumn fx:id="colEquipmentItemHomebrew" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Homebrew" />
+                                    </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#removeEquipmentItem" text="Remove from the database" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                                </TableView>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <Tab text="All Homebrew">
+                    <content>
+                        <VBox spacing="10.0">
+                            <padding>
+                                <Insets top="10" />
+                            </padding>
+                            <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label styleClass="text-shadow" text="Search by:" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="homebrewFilterBox" prefWidth="120.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <TextField fx:id="homebrewFilterText" />
+                              <Button fx:id="homebrewFilterButton" mnemonicParsing="false" onAction="#homebrewFilterBy" text="Search" />
+                           </children>
+                        </HBox>
+                                <TableView fx:id="homebrewTable" VBox.vgrow="ALWAYS">
+                                    <columns>
+                              <TableColumn fx:id="colHomebrewIndex" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Index" />
+                                        <TableColumn fx:id="colHomebrewName" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Name" />
+                                        <TableColumn fx:id="colHomebrewType" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Type" />
+                                        <TableColumn fx:id="colHomebrewDesc" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Description" />
+                                    </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#removeHomebrew" text="Remove from the database" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                                </TableView>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+
+            </tabs>
+        </TabPane>
+        <ProgressBar fx:id="loadingTables" prefWidth="200.0" progress="0.0" />
+    </children>
+</VBox>

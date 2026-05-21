@@ -1,0 +1,15 @@
+
+.homepage_background{
+    -fx-background-image: url('../img/homepage.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.text-shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 10, 0, 0, 0);
+}
+
+.menu-items-size{
+    -fx-font-size: 18px;
+}

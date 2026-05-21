@@ -1,0 +1,16 @@
+
+.initialize_background{
+    -fx-background-image: url('../img/initialize.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.text-shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 10, 0, 0, 0);
+}
+
+#homeLink{
+    -fx-font-size: 24px;
+    -fx-effect: dropshadow(one-pass-box, black, 4, 1.0, 0, 0);
+}

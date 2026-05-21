@@ -1,0 +1,16 @@
+
+.database_background{
+    -fx-background-image: url('../img/database.jpg');
+    -fx-background-repeat: repeat;
+    -fx-background-size: auto;
+    -fx-background-position: left top;
+}
+
+.text-shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 10, 0, 0, 0);
+}
+
+#homeLink{
+    -fx-font-size: 24px;
+    -fx-effect: dropshadow(one-pass-box, black, 4, 1.0, 0, 0);
+}

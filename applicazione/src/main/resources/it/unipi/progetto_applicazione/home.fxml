@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.progetto_applicazione.HomeController">
+   <content>
+      <VBox alignment="CENTER" spacing="20.0" styleClass="homepage_background" stylesheets="@style/homepage.css">
+         <children>
+            <Label styleClass="text-shadow" stylesheets="@style/homepage.css" text="D&amp;D Manager" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-shadow" text="Welcome, what do you want to do?">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Text>
+            <MenuButton mnemonicParsing="false" text="Click me           ">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#initializeDatabase" styleClass="menu-items-size" text="Initialize database" />
+                <MenuItem mnemonicParsing="false" onAction="#addNewData" styleClass="menu-items-size" text="Add new data" />
+                  <MenuItem mnemonicParsing="false" onAction="#database" styleClass="menu-items-size" text="Show database" />
+              </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

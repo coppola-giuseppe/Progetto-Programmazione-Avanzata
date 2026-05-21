@@ -1,0 +1,17 @@
+it\unipi\progetto_servizio\controllers\equipmentItems\EquipmentItemsController.class
+it\unipi\progetto_servizio\StartupRunner.class
+it\unipi\progetto_servizio\converter\ComponentListJsonConverter$1.class
+it\unipi\progetto_servizio\repositories\EquipmentItemRepository.class
+it\unipi\progetto_servizio\javabeans\MagicItem.class
+it\unipi\progetto_servizio\javabeans\EquipmentItem.class
+it\unipi\progetto_servizio\DataInitializer.class
+it\unipi\progetto_servizio\javabeans\Spell.class
+it\unipi\progetto_servizio\controllers\spells\SpellController.class
+it\unipi\progetto_servizio\converter\ComponentListJsonConverter.class
+it\unipi\progetto_servizio\javabeans\GameData.class
+it\unipi\progetto_servizio\controllers\magicItems\MagicItemsController.class
+it\unipi\progetto_servizio\javabeans\MagicItemEncoded.class
+it\unipi\progetto_servizio\controllers\MainController.class
+it\unipi\progetto_servizio\ProgettoServizioApplication.class
+it\unipi\progetto_servizio\repositories\MagicItemRepository.class
+it\unipi\progetto_servizio\repositories\SpellRepository.class
