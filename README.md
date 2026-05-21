@@ -54,4 +54,4 @@ La suite di test verifica l'integrità delle operazioni CRUD:
 * Rimozione corretta dei dati.
 
 ## Documentazione
-Per un'analisi approfondita degli endpoint REST, della struttura del database e dei pattern di conversione JSON, consulta la [Documentazione Tecnica Completa](docs/Documentazione-DnDManager.pdf).
+Per un'analisi approfondita degli endpoint REST, della struttura del database e dei pattern di conversione JSON, consulta la [documentazione](docs/Documentazione-DnDManager.pdf).

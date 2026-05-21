@@ -1,6 +1,6 @@
-Project for "_Programmazione avanzata_" course at the University of Pisa.
 
-**_D&D Manager - Application_**
+# **_D&D Manager - Applicazione_ (Client)**
 
-
-For more information check the documentation in **/doc** folder in the [service repository](https://gitlab.com/g.coppola12/progetto_servizio).
+Per maggiori informazioni controlla la [documentazione](../docs/Documentazione-DnDManager.pdf) oppure il [README](../README.md) principale.
+***
+For more information check the [documentation](../docs/Documentazione-DnDManager.pdf) or the main [README](../README.md).
